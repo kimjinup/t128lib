@@ -10,18 +10,21 @@ class NetworkInterface:
 
 class EthernetInterface:
     def __init__(self, name, pci_address):
+        self.name = name
         self.pci_address = pci_address
 
 
 class PPPoEInterface:
-    def __init__(self, user_name, password, authentication_protocol):
+    def __init__(self, name, user_name, password, authentication_protocol):
+        self.name = name
         self.user_name = user_name
         self.password = password
         self.authentication_protocol = authentication_protocol
 
 
 class LTEInterface:
-    def __init__(self,apn_name, user_name, password, authentication_protocol):
+    def __init__(self, name, apn_name, user_name, password, authentication_protocol):
+        self.name = name
         self.apn_name = apn_name
         self.user_name = user_name
         self.password = password
